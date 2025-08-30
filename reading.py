@@ -1,6 +1,7 @@
 try:
     file = open("Sample.txt","r")
     lines = file.readlines()
+    print("Reading file content:")
     for line in lines:
         print(line.rstrip())
 except FileNotFoundError:
