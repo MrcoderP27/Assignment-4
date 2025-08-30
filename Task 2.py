@@ -1,0 +1,15 @@
+text1 = input("Enter text to write to the file: ")
+file = open("Output.txt", "w")
+file_writing = file.write(f"{text1}\n")
+file.close()
+text2 = input("Enter another text to append: ")
+file = open("Output.txt", "a")
+file_appending = file.write(text2)
+file.close()
+
+file = open("Output.txt", "r")
+file_reading = file.readlines()
+print("Reading final file content: ")
+for line in file_reading:
+    print(line.rstrip())
+file.close()
